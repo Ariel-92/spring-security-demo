@@ -1,3 +1,6 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>luv2code Company Home Page</title>
@@ -6,6 +9,10 @@
 <body>
 <h2>luv2code Company Home Page</h2>
 <hr>
-Welcome to the luv2code company home page!
+<p>Welcome to the luv2code company home page!</p>
+
+<form:form action="${pageContext.request.contextPath}/logout" method="post">
+    <input type="submit" value="Logout" />
+</form:form>
 </body>
 </html>
