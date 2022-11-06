@@ -43,8 +43,9 @@ public class DemoSecurityConfig {
         return http
                 .authorizeRequests(configurer ->
                         configurer
-                                .anyRequest()
-                                .authenticated())
+                                .antMatchers("/").hasRole("EMPLOYEE")
+                                .antMatchers("/leaders/**").hasRole("MANAGER")
+                                .antMatchers("systems/**").hasRole("ADMIN"))
                 .formLogin(configurer ->
                         configurer
                                 .loginPage("/showMyLoginPage")
