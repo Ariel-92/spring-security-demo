@@ -25,7 +25,7 @@
 
 <security:authorize access="hasRole('MANAGER')">
     <p>
-        <a href="${pageContext.request.contextPath}/leaders">LeadShip Meeting</a>
+        <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
         (Only for Manager Peeps)
     </p>
 </security:authorize>
