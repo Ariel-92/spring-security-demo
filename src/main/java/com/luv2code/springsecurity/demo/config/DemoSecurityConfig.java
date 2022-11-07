@@ -45,7 +45,7 @@ public class DemoSecurityConfig {
                         configurer
                                 .antMatchers("/").hasRole("EMPLOYEE")
                                 .antMatchers("/leaders/**").hasRole("MANAGER")
-                                .antMatchers("systems/**").hasRole("ADMIN"))
+                                .antMatchers("/systems/**").hasRole("ADMIN"))
                 .formLogin(configurer ->
                         configurer
                                 .loginPage("/showMyLoginPage")
