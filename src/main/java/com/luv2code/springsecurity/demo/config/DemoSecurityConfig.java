@@ -53,6 +53,8 @@ public class DemoSecurityConfig {
                                 .permitAll())
                 .logout(configurer ->
                         configurer.permitAll())
+                .exceptionHandling(configurer ->
+                        configurer.accessDeniedPage("/access-denied"))
                 .build();
     }
 }
